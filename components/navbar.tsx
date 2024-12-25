@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { Menu } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,17 +32,18 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
-
+import { Modak } from "next/font/google";
+const modak = Modak({ subsets: ['latin'], weight: '400' })
 
 
 
 export default function Navbar() {
 
   return (
-    <div className="flex flex-row justify-between items-center px-5">
-      <h1>Medico</h1>
+    <div className=" w-full flex flex-row justify-between items-center px-5 py-2  bg-background rounded-lg">
+      <h1 className={`${modak.className} text-3xl :text-4xl font-regular`}>Medico</h1>
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <NavigationMenu>
           <NavigationMenuList>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
 
             <NavigationMenuItem>
               <Link href="/about-us" >
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us  </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
@@ -94,11 +94,11 @@ export default function Navbar() {
         </NavigationMenu>
       </div>
 
-      <div className="hidden md:block">
-        <Button variant={"outline"}>Contact Us</Button>
+      <div className="hidden lg:block">
+        <Button variant={"default"}>Contact Us</Button>
       </div>
       
-      {/* <div className=" md:hidden">
+      {/* <div className=" lg:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Menu className=""/>
@@ -115,10 +115,10 @@ export default function Navbar() {
         </DropdownMenu>
       </div> */}
 
-      <div className=" md:hidden">
+      <div className=" lg:hidden">
         <Drawer>
           <DrawerTrigger>
-            <Menu />
+            <img src="menu.svg" alt="menu" className="size-7" />
           </DrawerTrigger>
           
           <DrawerContent>

@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 @layer utilities {
@@ -21,10 +25,17 @@ body {
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+
+    --design-20: 188 84% 80% / 0.2;
+    --design-Full: 188 84% 80%;
+
+
+    --primary: 240 4.8% 95.9%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 5.9% 10%;
+    --secondary-foreground: 0 0% 98%;
+
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
     --accent: 240 4.8% 95.9%;
@@ -67,6 +78,8 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    --design-background: 188 84% 80%;
   }
 }
 
@@ -79,3 +92,33 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  overflow-y: scroll;
+
+}
+ 
+h1 {
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 64px;
+
+  }
+}
+
