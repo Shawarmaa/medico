@@ -27,7 +27,7 @@ export default function Home() {
       <Reviews/>
       <AboutUs/>
       <FAQ/>
-      <div className = " flex lg:flex-row flex-col justify-between items-center gap-10">
+      <div className = " flex lg:flex-row flex-col justify-between items-center lg:items-start gap-10 w-11/12">
         <LetsChat/>
         <Mailing/>
       </div>
