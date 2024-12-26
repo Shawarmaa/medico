@@ -24,11 +24,9 @@ const components: {title: string, description: string}[] = [
 ]
 
 const images: {name: string, position: string, src: string, alt: string}[] = [
-    {name: "name", position: "title", src: "image.png", alt: ""},
-    {name: "name", position: "title", src: "", alt: ""},
-    {name: "name", position: "title", src: "", alt: ""},
-    {name: "name", position: "title", src: "", alt: ""},
-    {name: "name", position: "title", src: "", alt: ""},
+    {name: "Zeeshan", position: "Founder", src: "image.png", alt: "team member picture"},
+    {name: "Abdul Raafi", position: "Founder", src: "image.png", alt: "team member picture"},
+    {name: "Abdelaziz", position: "Founder", src: "image.png", alt: "team member picture"},
 ]
 
 export default function AboutUs() {
@@ -45,7 +43,7 @@ export default function AboutUs() {
                             <CollapsibleTrigger>
                                 <h1 className = {`${anton.className} text-[36px] md:text-[48px]`}>{component.title}</h1>
                             </CollapsibleTrigger>
-                            <CollapsibleContent>
+                            <CollapsibleContent className = "flex flex-col gap-[30px]">
                                 <h1 className = "font-medium">{component.description}</h1>
 
                                 {component.title === "Meet the Team"? 

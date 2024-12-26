@@ -34,13 +34,13 @@ const components: { title: string, description: string }[] = [
 
 export default function FAQ() {
     return (
-        <div className = "flex flex-col justify-center items-center text-start w-full px-[20px] gap-[45px] max-w-[800px]">
-            <div className = "flex flex-col justify-center items-center text-center">
-                <h2 className = {`${anton.className} text-[36px] md:text-[48px]`}>FAQ's</h2>
+        <div className = "flex flex-col justify-center xl:flex-row xl:items-start items-center text-start w-full px-[20px] gap-[45px] ">
+            <div className = "flex flex-col justify-center items-center text-center xl:text-start xl:items-start">
+                <h2 className = {`${anton.className}`}>FAQ's</h2>
                 <h1>Answers to some questions you might have</h1>
             </div>
 
-            <div className = "flex flex-col justify-center items-center gap-[20px] md:gap-[45px] w-full leading-[20px]">
+            <div className = "flex flex-col justify-center items-center gap-[20px] md:gap-[45px] w-full leading-[20px] max-w-[750px]">
                 {components.map((component) => (
                     <Collapsible key={component.title} className = "flex flex-col gap-[10px] justify-between items-center p-[10px] md:py-[20px] md:px-[30px] rounded-[10px] bg-design w-full">
                         <CollapsibleTrigger className = "flex flex-row justify-between items-center w-full">
