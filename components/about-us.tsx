@@ -18,11 +18,11 @@ const components: {title: string, description: string}[] = [
 ]
 
 const images: {name: string, position: string, src: string, alt: string}[] = [
-    {name: "zeeshan", position: "CEO", src: "", alt: ""},
-    {name: "zeeshan", position: "CEO", src: "", alt: ""},
-    {name: "zeeshan", position: "CEO", src: "", alt: ""},
-    {name: "zeeshan", position: "CEO", src: "", alt: ""},
-    {name: "zeeshan", position: "CEO", src: "", alt: ""},
+    {name: "name", position: "title", src: "image.png", alt: ""},
+    {name: "name", position: "title", src: "", alt: ""},
+    {name: "name", position: "title", src: "", alt: ""},
+    {name: "name", position: "title", src: "", alt: ""},
+    {name: "name", position: "title", src: "", alt: ""},
 ]
 
 export default function AboutUs() {
@@ -40,11 +40,11 @@ export default function AboutUs() {
                         {component.title === "Meet the Team"? 
                         <div className = "flex flex-wrap justify-center items-center gap-[10px] md:gap-[40px]">
                             {images.map((image) => (
-                                <div key = {image.name} className = "flex flex-col justify-end items-center relative rounded-[20px] p-[10px]"> 
-                                    <img key = {image.src} src = {image.src} alt = {image.alt} className = "size-[150px] "/>
-                                    <div className = "absolute flex flex-col justify-center items-center text-background bg-design px-[10px] py-[5px] md:py-[10px] rounded-[10px]">
-                                        <h1 className = "text-[13px] md:text-[24px] font-bold">{image.position}</h1>
-                                        <h1 className = "text-[11px] md:text-[16px] font-regular">{image.name}</h1>
+                                <div key = {image.name} className = "flex flex-col justify-end items-center relative rounded-[20px]"> 
+                                    <img key = {image.src} src = {image.src} alt = {image.alt} className = "w-[146px] h-[162px] md:w-[280px] md:h-[310px] rounded-[20px] "/>
+                                    <div className = " w-[126px] h-[39px] md:w-[260px] md:h-[73px] absolute bottom-[10px] flex flex-col justify-center items-center text-background bg-foreground/90 px-[10px] py-[5px] md:py-[10px] rounded-[10px] gap-[7px]">
+                                        <h1 className = "text-[13px] md:text-[24px] font-bold leading-none">{image.name}</h1>
+                                        <h1 className = "text-[11px] md:text-[16px] font-regular leading-none">{image.position}</h1>
                                     </div>
                                 </div>
                             ))}
