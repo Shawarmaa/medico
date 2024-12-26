@@ -1,4 +1,10 @@
 import { Anton } from "next/font/google";
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } from "@/components/ui/collapsible"
+  
 
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 
@@ -35,21 +41,28 @@ export default function AboutUs() {
             <div className = "flex flex-col justify-center items-center gap-[40px] text-center text-background">
                 {components.map((component) =>(
                     <div key = {component.title} className = "flex flex-col gap-[30px] p-[40px] bg-secondary rounded-xl">
-                        <h1 className = {`${anton.className} text-[36px] md:text-[48px]`}>{component.title}</h1>
-                        <h1 className = "font-medium">{component.description}</h1>
-                        {component.title === "Meet the Team"? 
-                        <div className = "flex flex-wrap justify-center items-center gap-[10px] md:gap-[40px]">
-                            {images.map((image) => (
-                                <div key = {image.name} className = "flex flex-col justify-end items-center relative rounded-[20px]"> 
-                                    <img key = {image.src} src = {image.src} alt = {image.alt} className = "w-[146px] h-[162px] md:w-[280px] md:h-[310px] rounded-[20px] "/>
-                                    <div className = " w-[126px] h-[39px] md:w-[260px] md:h-[73px] absolute bottom-[10px] flex flex-col justify-center items-center text-background bg-foreground/90 px-[10px] py-[5px] md:py-[10px] rounded-[10px] gap-[7px]">
-                                        <h1 className = "text-[13px] md:text-[24px] font-bold leading-none">{image.name}</h1>
-                                        <h1 className = "text-[11px] md:text-[16px] font-regular leading-none">{image.position}</h1>
-                                    </div>
+                        <Collapsible>
+                            <CollapsibleTrigger>
+                                <h1 className = {`${anton.className} text-[36px] md:text-[48px]`}>{component.title}</h1>
+                            </CollapsibleTrigger>
+                            <CollapsibleContent>
+                                <h1 className = "font-medium">{component.description}</h1>
+
+                                {component.title === "Meet the Team"? 
+                                <div className = "flex flex-wrap justify-center items-center gap-[10px] md:gap-[40px]">
+                                    {images.map((image) => (
+                                        <div key = {image.name} className = "flex flex-col justify-end items-center relative rounded-[20px]"> 
+                                            <img key = {image.src} src = {image.src} alt = {image.alt} className = "w-[146px] h-[162px] md:w-[280px] md:h-[310px] rounded-[20px] "/>
+                                            <div className = " w-[126px] h-[39px] md:w-[260px] md:h-[73px] absolute bottom-[10px] flex flex-col justify-center items-center text-background bg-foreground/90 px-[10px] py-[5px] md:py-[10px] rounded-[10px] gap-[7px]">
+                                                <h1 className = "text-[13px] md:text-[24px] font-bold leading-none">{image.name}</h1>
+                                                <h1 className = "text-[11px] md:text-[16px] font-regular leading-none">{image.position}</h1>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
-                        : null}
+                                : null}
+                            </CollapsibleContent>
+                        </Collapsible>
                     </div>
                 ))}
             </div>
