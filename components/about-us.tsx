@@ -19,15 +19,15 @@ const anton = Anton({ subsets: ['latin'], weight: '400' })
 const components: {title: string, description: string}[] = [
     {
         title: "Our Mission",
-        description: "At our core, we are driven by an unwavering commitment to transform the landscape of medical school applications. Our mission is to pioneer a tutoring group that redefines the standard for aspiring medical professionals. We believe that every student with a passion for medicine deserves the opportunity to shine, and we are dedicated to providing them with the tools, knowledge, and support needed to excel in their journey towards medical school. With a team of experienced tutors and a cutting-edge approach to preparation, we aim to empower aspiring doctors to not just meet but exceed their academic and application goals. Together, we are revolutionizing the future of medical education and creating a brighter path for the healthcare leaders of tomorrow."
+        description: "We are committed to transforming medical school applications through pioneering tutoring. We provide aspiring medical professionals with expert guidance, tools and support to excel in their journey. Our experienced tutors empower students to exceed their goals and create pathways for tomorrow's healthcare leaders."
     },
     {
-        title: "Our Story",
-        description: "Medico emerged from the shared aspirations of three students striving to enter the medical field. They conquered their own admission challenges, and in doing so, recognized the need for guidance. Thus, Medico was born, a company founded by those who walked the same path, now helping others realize their dreams in medicine."
+        title: "Our Story", 
+        description: "Medico was founded by three students who successfully navigated medical school admissions. Having overcome these challenges themselves, they created Medico to guide others on the same path to achieving their medical dreams."
     },
     {
         title: "Meet the Team",
-        description: "Our team includes people from all walks of life. Our shared passion for teaching helps us run the best courses. While we can't feature everyone who contributes to Medico, here are a few of the people you may meet along the way, including some of the talented medics who support aspiring medical students."
+        description: "Our diverse team of passionate educators and medical professionals work together to deliver exceptional tutoring. Meet some of the talented individuals helping aspiring medical students succeed."
     }
 ]
 
@@ -39,7 +39,7 @@ const images: {name: string, position: string, src: string, alt: string}[] = [
 
 export default function AboutUs() {
     return (
-        <div className = "flex flex-col justify-center items-center gap-[60px] w-full">
+        <div className = "flex flex-col justify-center items-center gap-[60px] max-w-[1000px] w-full">
             <div className="flex flex-col justify-center items-center">
                 <h2 className={`${anton.className}`}>About Us</h2>
                 <h1>Get to know us, our core values and what makes us unique</h1>

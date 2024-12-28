@@ -57,7 +57,7 @@ export default function Services() {
 
     return (
         <div className="flex flex-row gap-10 ">
-            <div className="flex flex-col justify-start items-center sm:items-start gap-10">
+            <div className="flex flex-col justify-start items-center sm:items-start gap-10 xl:w-[600px]">
                 <h2 className={`${anton.className}`}>Services</h2>
 
                 <div className="flex flex-col gap-7 items-center sm:items-start">
