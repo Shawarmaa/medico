@@ -12,7 +12,7 @@ export default function Hero() {
                 <h1 className=" md:max-w-3xl">Unlock your potential with Medico. Personalized tutoring from passionate experts to boost your grades and career.</h1>
             </div>
 
-            <Button variant={"default"}>Our Services</Button>
+            <Button className="shadow-[-4px_4px_0_0_#422800] text-lg select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]">Our Services</Button>
 
             <div className="flex flex-row justify-center items-center gap-3">
                 <h1 className="text-xs font-bold">Excellent</h1>
