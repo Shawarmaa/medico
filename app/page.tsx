@@ -18,7 +18,7 @@ export default function Home() {
       <div className="p-5 z-10 sticky top-0 w-full">
         <Navbar/>
       </div>
-
+      
       <Hero/>
       <Event/>
       <Services/>

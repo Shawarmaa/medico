@@ -13,6 +13,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Anton } from "next/font/google";
+import { Textarea } from "./ui/textarea"
 
 const formSchema = z.object({
     name: z.string().min(1, {message: "Name is required"}).max(50, {message: "Name must be less than 50 characters"}),
@@ -20,8 +22,6 @@ const formSchema = z.object({
     message: z.string().min(1, {message: "Message is required"}).max(500, {message: "Message must be less than 500 characters"}),
 })
 
-import { Anton } from "next/font/google";
-import { Textarea } from "./ui/textarea"
 
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 
@@ -43,7 +43,7 @@ export default function LetsChat() {
     return (
         <div className = "flex flex-col justify-center items-center gap-4">
             <div className = "flex flex-col justify-center items-center gap-2">
-                <h2 className = {`${anton.className}`}>Let's chat</h2>
+                <h2 className = {`${anton.className}`}>Let's Chat</h2>
                 <h1>Reach out and we’ll get in touch within 24 hours.</h1>
             </div>
             
