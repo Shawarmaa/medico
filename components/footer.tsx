@@ -1,28 +1,56 @@
 import { Anton, Modak } from "next/font/google";
 import { Separator } from "@/components/ui/separator"
 import { Button } from "./ui/button";
-import { InstagramIcon, MailIcon } from "lucide-react";
-
+import { InstagramIcon, MailIcon, FacebookIcon, LinkedinIcon } from "lucide-react";
 
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 const modak = Modak({ subsets: ['latin'], weight: '400' })
 
 export default function Footer() {
     return (
-        <div className = "flex flex-col justify-center items-center w-full">
-            <hr className = "w-full pb-3"/>
+        <footer className="w-full bg-background py-8 md:py-12">
+            <div className="container mx-auto px-4">
+                <div className=" flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-8">
+                    <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
+                        <h2 className={modak.className + " text-2xl"}>MedicoTutoring</h2>
+                        <p className="text-sm text-muted-foreground w-[200px] md:w-[300px]">
+                            Expert medical tutoring services to help you succeed.
+                        </p>
+                    </div>
 
-            <div className="flex flex-row justify-between items-center w-full">
-
-                    <h2 className={modak.className + " text-[40px]"}>MedicoTutoring</h2>
-
-                <div className = "flex flex-row justify-end items-center gap-5">
-                    <h1 className="text-[14px]">© 2024 MedicoTutoring</h1>
-                    <Button variant="link" className="text-[14px]">Terms of Service</Button>
-                    <InstagramIcon className="size-7"/>
+                    <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left gap-3">
+                        <h3 className="font-semibold">Contact Us</h3>
+                        <a href="mailto:info@medicotutoring.com" className="text-sm text-muted-foreground hover:text-primary">
+                            info@medicotutoring.com
+                        </a>
+                    </div>
                 </div>
-                
+
+                <Separator className="mb-8" />
+
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-sm text-muted-foreground">
+                        © 2024 MedicoTutoring
+                    </p>
+
+                    <div className="flex items-center gap-4">
+                        <Button variant="ghost" size="icon" className="hover:text-foreground">
+                            <InstagramIcon className="size-5" />
+                        </Button>
+                        <Button variant="ghost" size="icon" className="hover:text-foreground">
+                            <FacebookIcon className="size-5" />
+                        </Button>
+                        <Button variant="ghost" size="icon" className="hover:text-foreground">
+                            <LinkedinIcon className="size-5" />
+                        </Button>
+                    </div>
+
+                    <div className="flex gap-4">
+                        <Button variant="link" className="text-sm p-0 h-auto">Privacy Policy</Button>
+                        <Button variant="link" className="text-sm p-0 h-auto">Terms of Service</Button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </footer>
     )
 }

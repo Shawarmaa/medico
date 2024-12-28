@@ -62,7 +62,7 @@ export default function FAQ() {
                 ))}*/}
                 <Accordion type="single" collapsible className="w-full flex flex-col ">
                     {components.map((component) =>(
-                        <AccordionItem value={component.title} className="" >
+                        <AccordionItem value={component.title} key={component.title}>
                             <AccordionTrigger><h1>{component.title}</h1></AccordionTrigger>
                             <AccordionContent><p className = "text-[14px] md:text-[18px]">{component.description}</p></AccordionContent>
                         </AccordionItem>

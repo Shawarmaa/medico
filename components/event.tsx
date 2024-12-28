@@ -9,7 +9,7 @@ const anton = Anton({
 
 export default function Event() {
     return (
-        <div className="flex flex-col items-start bg-design gap-5 px-5 py-10 md:p-16 lg:p-20 rounded-xl max-w-[1320px] relative items-center sm:items-start">
+        <div className="flex flex-col bg-design gap-5 px-5 py-10 md:p-16 lg:p-20 rounded-xl max-w-[1320px] relative items-center sm:items-start">
             <h2 className={` text-4xl md:text-5xl lg:text-6xl text-center md:text-start ${anton.className}`}>Level Up Your Personal Statement</h2>
             
             <div className="flex flex-col items-start gap-5">
