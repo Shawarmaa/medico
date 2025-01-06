@@ -1,5 +1,3 @@
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
-import { ChevronDownIcon } from "lucide-react";
 import { Anton } from "next/font/google";
 import {
     Accordion,

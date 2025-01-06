@@ -29,14 +29,14 @@ export default function Event() {
                     </div>
                 </div>
                 <div>
-                    <h1>In this session, you'll discover:</h1>
+                    <h1>In this session, you&apos;ll discover:</h1>
                     <ul className='list-disc pl-5'>
                         <li><h1>Effective reflection techniques</h1></li>
                         <li><h1>Proven personal statement structures</h1></li>
                         <li><h1>Essential tips and tricks</h1></li>
                     </ul>
                 </div>
-                <h1>Don't miss out!</h1>
+                <h1>Don&apos;t miss out!</h1>
             </div>
             
             <Button className='shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]'>Sign up now</Button>
