@@ -54,7 +54,7 @@ export default function AboutUs() {
                                 </AccordionTrigger>
                             </div>
                             <AccordionContent className="flex flex-col gap-[30px] w-full">
-                                <h1 className="font-medium">{component.description}</h1>
+                                <h1 className="">{component.description}</h1>
 
                                 {component.title === "Meet the Team" ? 
                                 <div className="flex flex-wrap justify-center items-center gap-[10px] md:gap-[40px]">

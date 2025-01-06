@@ -63,7 +63,7 @@ export default function Services() {
                 <div className="flex flex-col gap-7 items-center sm:items-start">
                     <div className="flex flex-wrap gap-5 justify-center sm:justify-start">
                         {services.map((service) => (
-                            <Button key={service.title} className={` ${activeService === service.title ? 'bg-designFull' : ''}`} onClick={() => handleServiceClick(service.title)}>
+                            <Button key={service.title} className={`shadow-[-4px_4px_0_0_#422800] text-lg select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px] hover:bg-designFull ${activeService === service.title ? 'bg-designFull' : ''}`} onClick={() => handleServiceClick(service.title)}>
                                 <h1>{service.title}</h1>
                             </Button>
 
@@ -73,7 +73,7 @@ export default function Services() {
                     </div>
                     <div className="flex flex-wrap gap-5 justify-center sm:justify-start">
                         {services.map((service) => service.options.map((option) =>(
-                                <Link key={option.title} href={option.href} className={` border-2 border-secondary rounded-[20px] px-[25px] py-[10px] flex justify-center items-center hover:bg-designFull ${activeService === service.title ? 'block' : 'hidden'}`}>
+                                <Link key={option.title} href={option.href} className={`shadow-[0_4px_0_0_#422800] text-lg select-none active:shadow-[0px_2px_0_0_#422800] active:translate-y-[2px] border-2 border-secondary rounded-[20px] px-[25px] py-[10px] flex justify-center items-center hover:bg-designFull/50 ${activeService === service.title ? 'block' : 'hidden'}`}>
                                     <h1>{option.title}</h1>
                                 </Link>
                             )))}

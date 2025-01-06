@@ -34,14 +34,14 @@ export default function Footer() {
                     </p>
 
                     <div className="flex items-center gap-4">
-                        <Button variant="ghost" size="icon" className="hover:text-foreground">
-                            <InstagramIcon className="size-5" />
+                        <Button variant="ghost" size="icon" className="">
+                            <InstagramIcon />
                         </Button>
-                        <Button variant="ghost" size="icon" className="hover:text-foreground">
-                            <FacebookIcon className="size-5" />
+                        <Button variant="ghost" size="icon" className="">
+                            <FacebookIcon />
                         </Button>
-                        <Button variant="ghost" size="icon" className="hover:text-foreground">
-                            <LinkedinIcon className="size-5" />
+                        <Button variant="ghost" size="icon" className=" ">
+                            <LinkedinIcon className=""/>
                         </Button>
                     </div>
 

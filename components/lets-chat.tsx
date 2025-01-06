@@ -88,7 +88,7 @@ export default function LetsChat() {
                         </FormItem>
                     )}
                     />
-                    <Button type="submit" className = "w-full">Submit</Button>
+                    <Button type="submit" className = "shadow-[-4px_4px_0_0_#422800] text-lg select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px] w-full">Submit</Button>
                 </form>
             </Form>
 

@@ -39,7 +39,7 @@ export default function Event() {
                 <h1>Don't miss out!</h1>
             </div>
             
-            <Button>Sign up now</Button>
+            <Button className='shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]'>Sign up now</Button>
 
             <img src="minions.svg" alt="minions image" className="absolute bottom-0 right-0 hidden xl:block" />
             
