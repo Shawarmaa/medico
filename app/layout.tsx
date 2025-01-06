@@ -13,14 +13,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className} antialiased`}>
       <body>
-        <ThemeProvider
+        {/*<ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
             {children}
-          </ThemeProvider>
+          </ThemeProvider>*/}
+          {children}
       </body>
     </html>
   );
