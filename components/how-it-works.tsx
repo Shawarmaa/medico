@@ -10,7 +10,7 @@ export default function HowItWorks() {
         <div className="flex flex-col justify-center items-center gap-4 md:gap-[60px] text-center ">
             <div className="flex flex-col items-center gap-5 px-5">
                 <h2 className={`${anton.className}`}>How It Works</h2>
-                <h1>Whether you’re revising for an exam or needs regular support, it's easy to get started.</h1>
+                <h1>Whether you&apos;re revising for an exam or needs regular support, it&apos;s easy to get started.</h1>
             </div>
 
             <div className="flex flex-wrap items-center justify-center w-screen gap-[60px] lg:justify-around px-2.5 md:px-10 lg:px-24">

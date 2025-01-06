@@ -41,7 +41,7 @@ export default function FAQ() {
     return (
         <div className = "flex flex-col justify-center xl:flex-row xl:items-start items-center text-start w-full gap-[45px] ">
             <div className = "flex flex-col justify-center items-center text-center xl:text-start xl:items-start">
-                <h2 className = {`${anton.className}`}>FAQ's</h2>
+                <h2 className = {`${anton.className}`}>FAQ&apos;s</h2>
                 <h1>Answers to some questions you might have</h1>
             </div>
 

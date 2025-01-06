@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "./ui/button";
 import { InstagramIcon, FacebookIcon, LinkedinIcon } from "lucide-react";
 
-const anton = Anton({ subsets: ['latin'], weight: '400' })
+
 const modak = Modak({ subsets: ['latin'], weight: '400' })
 
 export default function Footer() {
