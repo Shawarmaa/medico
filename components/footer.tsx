@@ -1,4 +1,4 @@
-import { Anton, Modak } from "next/font/google";
+import { Modak } from "next/font/google";
 import { Separator } from "@/components/ui/separator"
 import { Button } from "./ui/button";
 import { InstagramIcon, FacebookIcon, LinkedinIcon } from "lucide-react";
