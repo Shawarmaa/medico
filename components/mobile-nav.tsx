@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -70,7 +69,6 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter();
   return (
     <Link
       href={href}
