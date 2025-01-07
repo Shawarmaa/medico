@@ -38,12 +38,13 @@ export default function MobileNav() {
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
         <div className="overflow-auto p-6">
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col">
             {navLinks.map((item) => (
               <MobileLink
                 key={item.href}
                 href={item.href}
                 onOpenChange={setOpen}
+                className=" py-3"
               >
                 {item.title}
               </MobileLink>
