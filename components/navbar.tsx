@@ -53,25 +53,25 @@ export default function Navbar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/why-us" >
+              <Link href="#why-us" >
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>Why Us</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/reviews" >
+              <Link href="#reviews" >
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>Reviews</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/about-us" >
+              <Link href="#about-us" >
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us  </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/faqs" >
+              <Link href="#faqs" >
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQs</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -112,10 +112,10 @@ export default function Navbar() {
             <DrawerHeader className="">
               <Link href="/" >Services</Link>
               <Link href="/" >Alevel</Link>
-              <Link href="/" >Why Us</Link>
-              <Link href="/" >Reviews</Link>
-              <Link href="/" >About Us</Link>
-              <Link href="/" >FAQs</Link>
+              <Link href="#why-us" >Why Us</Link>
+              <Link href="#reviews" >Reviews</Link>
+              <Link href="#about-us" >About Us</Link>
+              <Link href="#faqs" >FAQs</Link>
             </DrawerHeader>
           </DrawerContent>
         </Drawer>
