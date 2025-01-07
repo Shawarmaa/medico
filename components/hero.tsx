@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 import { Anton } from "next/font/google";
 const anton = Anton({ subsets: ['latin'], weight: '400' })
@@ -12,7 +13,7 @@ export default function Hero() {
                 <h1 className=" md:max-w-3xl"><p className="hidden sm:block">Unlock your potential with Medico.</p><p> Personalized tutoring from passionate experts to boost your grades and career.</p></h1>
             </div>
 
-            <Button className="shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]">Our Services</Button>
+            <Button className="shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]"><Link href={"#services"}> Our Services</Link></Button>
 
 
             <div className="flex flex-row justify-center items-center gap-3">
