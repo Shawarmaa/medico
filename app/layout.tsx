@@ -1,5 +1,6 @@
 {/*import { ThemeProvider } from "@/components/theme-provider";*/}
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import { Inter } from 'next/font/google';
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           </ThemeProvider>*/}
           {children}
           <SpeedInsights />
+          <Analytics />
 
       </body>
     </html>
