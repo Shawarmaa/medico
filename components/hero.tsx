@@ -4,12 +4,12 @@ const anton = Anton({ subsets: ['latin'], weight: '400' })
 
 export default function Hero() {
     return (
-        <div className="flex flex-col items-center p-10 gap-8">
+        <div className="flex flex-col items-center pt-0 md:pt-10 p-10 gap-8">
 
             <div className={"flex flex-col items-center gap-4 text-center" }>
-                <h1 className="">Smart people use tutors to get even smarter</h1>
+                <h1 className="hidden sm:block">Smart people use tutors to get even smarter</h1>
                 <h3 className={`text-5xl md:text-7xl xl:text-8xl ${anton.className}`}>Rethink Learning</h3>
-                <h1 className=" md:max-w-3xl">Unlock your potential with Medico. Personalized tutoring from passionate experts to boost your grades and career.</h1>
+                <h1 className=" md:max-w-3xl"><p className="hidden sm:block">Unlock your potential with Medico.</p><p> Personalized tutoring from passionate experts to boost your grades and career.</p></h1>
             </div>
 
             <Button className="shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]">Our Services</Button>

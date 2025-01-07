@@ -39,7 +39,7 @@ const components: { title: string, description: string }[] = [
 
 export default function FAQ() {
     return (
-        <div id="faqs" className=" pt-20 flex flex-col justify-center xl:flex-row xl:items-start items-center text-start w-full gap-[45px] ">
+        <div id="faqs" className=" pt-20 px-5 flex flex-col justify-center xl:flex-row xl:items-start items-center text-start w-full gap-[45px] ">
             <div className = "flex flex-col justify-center items-center text-center xl:text-start xl:items-start">
                 <h2 className = {`${anton.className}`}>FAQ&apos;s</h2>
                 <h1>Answers to some questions you might have</h1>

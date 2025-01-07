@@ -11,11 +11,12 @@ import LetsChat from "@/components/lets-chat";
 import Mailing from "@/components/mailing";
 import Footer from "@/components/footer";
 
+
 export default function Home() {
   return (
-    <div className="flex flex-col gap-14 items-center lg:gap-36 px-2.5 md:px-10 lg:px-24">
+    <div className=" pt-32 lg:pt-44 flex flex-col gap-14 items-center lg:gap-36 px-2.5 md:px-10 lg:px-24">
       
-      <div className="p-5 z-10 sticky top-0 w-full">
+      <div className="p-5 z-10 fixed top-0 w-full">
         <Navbar/>
       </div>
       
@@ -27,7 +28,7 @@ export default function Home() {
       <Reviews/>
       <AboutUs/>
       <FAQ/>
-      <div className = " flex lg:flex-row flex-col justify-between items-center lg:items-start gap-10 w-11/12">
+      <div className=" pt-10 flex lg:flex-row flex-col justify-between items-center lg:items-start gap-16 w-11/12">
         <LetsChat/>
         <Mailing/>
       </div>

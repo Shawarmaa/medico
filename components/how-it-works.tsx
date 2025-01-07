@@ -8,7 +8,7 @@ const anton = Anton({ subsets: ['latin'], weight: '400' })
 
 export default function HowItWorks() {
     return (
-        <div className="flex flex-col justify-center items-center gap-4 md:gap-[60px] text-center ">
+        <div className=" pt-20 flex flex-col justify-center items-center gap-4 md:gap-[60px] text-center ">
             <div className="flex flex-col items-center gap-5 px-5">
                 <h2 className={`${anton.className}`}>How It Works</h2>
                 <h1>Whether you&apos;re revising for an exam or needs regular support, it&apos;s easy to get started.</h1>

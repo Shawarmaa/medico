@@ -11,13 +11,9 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
 import { Button } from "./ui/button"
+import MobileNav from "@/components/mobile-nav";
 
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
+
 
 import { Modak } from "next/font/google";
 const modak = Modak({ subsets: ['latin'], weight: '400' })
@@ -85,40 +81,8 @@ export default function Navbar() {
         <Button variant={"default"}>Contact Us</Button>
       </div>
       
-      {/* <div className=" lg:hidden">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Menu className=""/>
-          </DropdownMenuTrigger>
-          
-          <DropdownMenuContent>
-            <DropdownMenuItem>Services</DropdownMenuItem>
-            <DropdownMenuItem>Alevel</DropdownMenuItem>
-            <DropdownMenuItem>Why Us</DropdownMenuItem>
-            <DropdownMenuItem>Reviews</DropdownMenuItem>
-            <DropdownMenuItem>About Us</DropdownMenuItem>
-            <DropdownMenuItem>FAQs</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div> */}
-
       <div className=" lg:hidden">
-        <Drawer>
-          <DrawerTrigger>
-            <img src="menu.svg" alt="menu" className="size-7" />
-          </DrawerTrigger>
-          
-          <DrawerContent>
-            <DrawerHeader className="">
-              <Link href="/" >Services</Link>
-              <Link href="/" >Alevel</Link>
-              <Link href="#why-us" >Why Us</Link>
-              <Link href="#reviews" >Reviews</Link>
-              <Link href="#about-us" >About Us</Link>
-              <Link href="#faqs" >FAQs</Link>
-            </DrawerHeader>
-          </DrawerContent>
-        </Drawer>
+        <MobileNav />
       </div>
 
     </div>
