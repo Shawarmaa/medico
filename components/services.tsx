@@ -12,19 +12,19 @@ const services : {title: string; options: {title: string; href: string}[]}[] = [
         options: [
             {
                 title: "Maths",
-                href: "/services/a-level/maths"
+                href: "https://medico-tutoring.neetocal.com/maths"
             },
             {
                 title: "Biology",
-                href: "/services/a-level/biology"
+                href: "https://medico-tutoring.neetocal.com/biology"
             },
             {
                 title: "Chemistry",
-                href: "/services/a-level/chemistry"
+                href: "https://medico-tutoring.neetocal.com/chemistry"
             },
             {
                 title: " Psycology",
-                href: "/services/a-level/psycology"
+                href: "https://medico-tutoring.neetocal.com/psychology"
             }
         ]
     },
@@ -32,16 +32,12 @@ const services : {title: string; options: {title: string; href: string}[]}[] = [
         title: "University Admissions",
         options: [
             {
-                title: "UCAS",
-                href: "/services/university/ucas"
-            },
-            {
-                title: "Personal Statement",
-                href: "/services/university/personal-statement"
+                title: "Personal Statement Review",
+                href: "https://medico-tutoring.neetocal.com/personal-statement-review"
             },
             {
                 title: "Interview Preparation",
-                href: "/services/university/interview-preparation"
+                href: "https://medico-tutoring.neetocal.com/interview-preparation"
             }
         ]
     },

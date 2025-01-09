@@ -81,7 +81,7 @@ export default function Navbar() {
         <Button variant={"default"}>Contact Us</Button>
       </div>
       
-      <div className=" lg:hidden">
+      <div className="block lg:hidden">
         <MobileNav />
       </div>
 
