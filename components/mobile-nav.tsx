@@ -32,7 +32,7 @@ export default function MobileNav() {
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
         <Button
-          variant="ghost" className="h-8 w-8 p-0 text-base md:hidden">
+          variant="ghost" className="h-8 w-8 p-0 text-base">
           <img src="menu.svg" alt="menu" className="size-7" />
         </Button>
       </DrawerTrigger>
