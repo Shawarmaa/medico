@@ -14,7 +14,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className=" pt-48 flex flex-col gap-14 items-center lg:gap-36 px-2.5 md:px-10 lg:px-24">
+    <div id="home" className=" pt-48 flex flex-col gap-14 items-center lg:gap-36 px-2.5 md:px-10 lg:px-24">
       
       <div className="p-5 z-10 fixed top-0 w-full">
         <Navbar/>

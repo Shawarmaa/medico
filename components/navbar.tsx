@@ -59,7 +59,9 @@ export default function Navbar() {
 
   return (
     <div className=" w-full flex flex-row justify-between items-center px-5 py-2  bg-background rounded-lg">
+      <Link href={"#home"}>
       <h1 className={`${modak.className} text-3xl :text-4xl font-regular`}>Medico</h1>
+      </Link>
 
       <div className="hidden lg:block">
         <NavigationMenu>
