@@ -41,7 +41,7 @@ export default function LetsChat() {
     }
 
     return (
-        <div className = "flex flex-col justify-center items-center gap-4">
+        <div className = "flex flex-col justify-center items-center gap-4 p-2">
             <div className = "flex flex-col justify-center items-center gap-2">
                 <h2 className = {`${anton.className}`}>Let&apos;s Chat</h2>
                 <h1>Reach out and we’ll get in touch within 24 hours.</h1>

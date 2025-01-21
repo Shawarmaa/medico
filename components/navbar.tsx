@@ -123,7 +123,7 @@ export default function Navbar() {
 
       <div className="hidden lg:block">
 
-        <Link href={"#contact-us"} className=" text-md shadow-[3px_3px_0_0_#422800] font-semibold select-none active:shadow-[2px_2px_0_0_#422800] active:translate-y-[2px] border-2 border-secondary rounded-[10px] px-[10px] py-[5px] flex justify-center items-center hover:bg-designFull/50 active:translate-x-[2px]">
+        <Link href={"#contact-us"} className=" text-sm shadow-[3px_3px_0_0_#422800] font-semibold select-none active:shadow-[2px_2px_0_0_#422800] active:translate-y-[2px] border-2 border-secondary rounded-[10px] px-[10px] py-[5px] flex justify-center items-center hover:bg-designFull/50 active:translate-x-[2px]">
         Contact Us
         </Link>
       </div>

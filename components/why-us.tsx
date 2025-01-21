@@ -17,7 +17,7 @@ const components: {img: string; title: string; description: string}[] = [
     {
         img: "/muscle.svg",
         title: "Confidence Building ",
-        description: "Gain the confidence to excel in your medical studies and future career"
+        description: "Gain confidence to excel in your medical studies and future career"
     },
     {
         img: "/papers.svg",
@@ -46,9 +46,9 @@ export default function WhyUs() {
 
             <div className="flex flex-wrap justify-center items-center gap-[5px] md:gap-[10px] max-w-[1300px] ">
                 {components.map((component) => (
-                    <div key={component.title} className="flex flex-col justify-center items-center gap-[5px] md:gap-5 px-[5px] md:px-5 size-[182px] md:w-[380px] md:h-[366px] lg:w-[400px] lg:h-[386px] bg-design rounded-xl">
+                    <div key={component.title} className="flex flex-col justify-center items-center gap-[5px] md:gap-3 px-[5px] md:px-5 size-[182px] md:w-[380px] md:h-[366px] lg:w-[360px] lg:h-[336px] bg-design rounded-xl">
                         <Image src={component.img} width={150} height={131} alt={component.title} className="h-[50px] md:h-[131px]" />
-                        <h1 className="text-[16px] md:text-[32px]">{component.title}</h1>
+                        <h1 className="text-[16px] md:text-[24px]">{component.title}</h1>
                         <h1 className="font-medium text-[13px] md:text-[20px] leading-[20px] md:leading-[35px]">{component.description}</h1>
                     </div>
                 ))}

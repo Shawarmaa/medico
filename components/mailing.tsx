@@ -35,7 +35,7 @@ export default function Mailing() {
     }
 
     return (
-        <div className = "flex flex-col justify-center items-center gap-4">
+        <div className = "flex flex-col justify-center items-center gap-4 p-2">
             <div className = "flex flex-col justify-center items-center gap-2">
                 <h2 className = {`${anton.className}`}>Join the Mail</h2>
                 <h1>Get updates and early access to our events</h1>
