@@ -3,9 +3,10 @@ import { Button } from "./ui/button";
 import { Anton } from "next/font/google";
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 
+
 export default function Hero() {
     return (
-        <div className="flex flex-col items-center pt-0 md:pt-10 p-10 gap-8">
+        <div className=" flex flex-col items-center pt-0 md:pt-10 p-10 gap-8 z-10">
 
             <div className={"flex flex-col items-center gap-4 text-center" }>
                 <h1 className="hidden sm:block">Smart people use tutors to get even smarter</h1>
@@ -21,7 +22,7 @@ export default function Hero() {
 
                 <img src="stars.svg" alt="trustpilot stars"/>
 
-                <div className="flex flex-row justify-center items-center gap-1">
+                <div className="flex flex-row justify-center items-center gap-1"> 
                     <img src="star.svg" alt="trustpilot star" />
                     <h1 className="text-xs font-bold">Trustpilot</h1>
                 </div>

@@ -58,17 +58,20 @@ export default function Reviews() {
             </div>
             
             <Carousel
-                className="w-full max-w-sm hidden   "
+                className="w-[1000px] "
             >
-                <CarouselContent className=" gap-10" >
+                <CarouselContent className=" " >
                     {reviews.map((review) => (
-                        <CarouselItem key={review.name} className="p-0 md:basis-1/2 lg:basis-1/3  ">
+                        <CarouselItem key={review.name} className="basis-1/3">
                             <Card className="p-1">
                                 <CardContent className=" aspect-square flex flex-col justify-center items-center">
-                                    <div className="text-yellow-500 text-xl font-bold">{review.rating} ★</div>
-                                    <h3 className="text-lg font-semibold mt-2">{review.title}</h3>
-                                    <h1 className="text-gray-600 text-sm mt-1">{review.description}</h1>
-                                    <p className="text-gray-500 text-sm mt-2">- {review.name}</p>
+                                    <div className="w-[300px] break-words whitespace-normal">
+
+                                        <div className="text-yellow-500 text-xl font-bold">{review.rating} ★</div>
+                                        <h3 className="text-lg font-semibold mt-2">{review.title}</h3>
+                                        <h1 className="text-gray-600 text-sm mt-1">{review.description}</h1>
+                                        <p className="text-gray-500 text-sm mt-2">- {review.name}</p>
+                                    </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
@@ -77,24 +80,25 @@ export default function Reviews() {
                 <CarouselPrevious />
                 <CarouselNext />
             </Carousel>
-
-            <Carousel className="w-full max-w-sm hidden">
-            <CarouselContent className="-ml-1">
-                {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                    <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-2xl font-semibold">{index + 1}</span>
-                        </CardContent>
-                    </Card>
-                    </div>
-                </CarouselItem>
-                ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            
+            <Carousel className="w-full max-w-md">
+                <CarouselContent>
+                    {Array.from({ length: 5 }).map((_, index) => (
+                    <CarouselItem key={index} className="basis-1/3">
+                        <div className="p-1">
+                        <Card>
+                            <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <span className="text-4xl font-semibold">{index + 1}</span>
+                            </CardContent>
+                        </Card>
+                        </div>
+                    </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious /> 
+                <CarouselNext />
             </Carousel>
+
 
         </div>
     )
