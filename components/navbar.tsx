@@ -75,7 +75,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`${isScrolled? "bg-background/95" : "bg-transparent"}  w-full flex flex-row justify-between items-center px-5 py-2 rounded-lg`}>
+    <div className={`${isScrolled? "bg-background/95" : "bg-transparent"} transition-all duration-1000  w-full flex flex-row justify-between items-center px-5 py-2 rounded-lg`}>
       <Link href={"#home"}>
       <h1 className={`${modak.className} text-3xl :text-4xl font-regular`}>Medico</h1>
       </Link>
