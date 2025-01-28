@@ -2,14 +2,16 @@
 
 import { Anton } from "next/font/google";
 
+import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
+
+
 
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 
@@ -54,7 +56,6 @@ const reviews : {rating: number, title?: string, description: string, name: stri
 
 export default function Reviews() {
 
-
     return (
         <div id="reviews" className=" pt-20 flex flex-col justify-center items-center text-center gap-32 w-full">
             <div className="max-w-[640px]">
@@ -63,46 +64,36 @@ export default function Reviews() {
                     </span> Medico</h2>
             </div>
             
-            <Carousel
-                className="w-[1000px] "
-            >
-                <CarouselContent className=" " >
-                    {reviews.map((review) => (
-                        <CarouselItem key={review.name} className="basis-1/3">
-                            <Card className="p-1">
-                                <CardContent className=" aspect-square flex flex-col justify-center items-center">
-                                    <div className="w-[300px] break-words whitespace-normal">
 
-                                        <div className="text-yellow-500 text-xl font-bold">{review.rating} ★</div>
-                                        <h3 className="text-lg font-semibold mt-2">{review.title}</h3>
-                                        <h1 className="text-gray-600 text-sm mt-1">{review.description}</h1>
-                                        <p className="text-gray-500 text-sm mt-2">- {review.name}</p>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
             
-            <Carousel className="w-full max-w-md">
-                <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index} className="basis-1/3">
-                        <div className="p-1">
-                        <Card>
-                            <CardContent className="flex aspect-square items-center justify-center p-6">
-                            <span className="text-4xl font-semibold">{index + 1}</span>
-                            </CardContent>
-                        </Card>
-                        </div>
-                    </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious /> 
-                <CarouselNext />
+            <Carousel className="w-screen ">
+            <CarouselContent className={`-ml-6`}>
+                        {reviews.map((review) => (
+                            <CarouselItem key={review.name} className="basis-1/1 pl-6 ">
+                                <Card className="">
+                                    <CardContent className=" p-8 aspect-square flex flex-col justify-center items-center">
+                                        <div className=" flex flex-col w-[270px] break-words whitespace-normal text-start gap-2">
+
+                                            <div className="text-yellow-500 text-xl font-bold flex">
+                                                {Array.from({length: review.rating}).map((_,index) => (
+                                                    <Image
+                                                    width={25} 
+                                                    height={25} 
+                                                    key= {index}
+                                                    src="star.svg" alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
+                                                ))}
+                                            </div>
+                                            <h3 className="text-lg font-semibold mt-2">{review.title}</h3>
+                                            <h1 className="text-gray-600 text-sm mt-1">{review.description}</h1>
+                                            <p className="text-gray-500 text-sm mt-2">- {review.name}</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                {/* <CarouselPrevious /> 
+                <CarouselNext /> */}
             </Carousel>
 
 
