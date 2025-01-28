@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,6 +10,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
 import MobileNav from "@/components/mobile-nav";
+import { useState, useEffect } from "react";
 
 
 
@@ -56,9 +56,26 @@ const admissions: { title: string; href: string; description?: string }[] = [
 ];
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() =>{
+    const handleScroll = () => {
+      if(window.scrollY>50){
+        setIsScrolled(true);
+      }
+      else{
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    };
+  }, []);
 
   return (
-    <div className=" w-full flex flex-row justify-between items-center px-5 py-2  bg-background rounded-lg">
+    <div className={`${isScrolled? "bg-background/95" : "bg-transparent"}  w-full flex flex-row justify-between items-center px-5 py-2 rounded-lg`}>
       <Link href={"#home"}>
       <h1 className={`${modak.className} text-3xl :text-4xl font-regular`}>Medico</h1>
       </Link>
@@ -67,8 +84,8 @@ export default function Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Tutoring</NavigationMenuTrigger>
+            <NavigationMenuItem >
+              <NavigationMenuTrigger >Tutoring</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] md:w-[500px] lg:w-[600px]  gap-1 p-4  lg:grid-cols-2">
                   {tutoring.map((service) => (
@@ -92,6 +109,7 @@ export default function Navbar() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <Link href="#why-us" >
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>Why Us</NavigationMenuLink>

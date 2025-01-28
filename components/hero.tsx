@@ -17,16 +17,16 @@ export default function Hero() {
             <Button className="p-0 shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]"><Link href={"#services"} className="px-[20px] py-[10px]">Our Services</Link></Button>
 
 
-            <div className="flex flex-row justify-center items-center gap-3">
-                <h1 className="text-xs font-bold">Excellent</h1>
+            <Link href={"https://uk.trustpilot.com/review/medicotutoring.com"} target="_blank" rel="noopener noreferrer" className="flex flex-row justify-center items-center gap-3 group">
+                <h1 className="text-xs font-bold group-hover:opacity-50">Excellent</h1>
 
-                <img src="stars.svg" alt="trustpilot stars"/>
+                <img src="stars.svg" alt="trustpilot stars" className="group-hover:opacity-50 transition-opacity"/>
 
                 <div className="flex flex-row justify-center items-center gap-1"> 
-                    <img src="star.svg" alt="trustpilot star" />
-                    <h1 className="text-xs font-bold">Trustpilot</h1>
+                    <img src="star.svg" alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
+                    <h1 className="text-xs font-bold group-hover:opacity-50">Trustpilot</h1>
                 </div>
-            </div>
+            </Link>
 
         </div>
     )

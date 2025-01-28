@@ -17,32 +17,38 @@ const reviews : {rating: number, title?: string, description: string, name: stri
     {
         rating: 5,
         title: "Fantastic UCAT course",
-        description: "loremsfasdfsafdsfasdfafdsfsadfsafsdafsfsfasfsadfloremsfasdfsafdsfasdfafdsfsadfsafsdafsfsfasfsadfloremsfasdfsafdsfasdfafdsfsadfsafsdafsfsfasfsadf",
-        name: "user"
+        description: "Absolutely amazing UCAT tips. Very interactive and a friendly environment. Thoroughly enjoyed the Medico 5 day UCAT course. There were so many useful tips and tricks, that I have benefitted from using and have made my practice a lot more smoother. Sincere thanks to all members for arranging such an amazing course. Looking forward to the future courses!!",
+        name: "Aleeza Shiraz"
     },
     {
         rating: 5,
-        title: "Fantastic UCAT course",
-        description: "loremsfasdfsafdsfasdfafdsfs",
-        name: "user"
+        title: "Extremely useful with ucat",
+        description: "Was so useful for ucat help, went through questions with us and gave feedback which was really helpful and shared tips and tricks which helped massively whilst answering questions and very interactive making it easier for any questions we had to get answered",
+        name: "Aasiya"
     },
     {
         rating: 5,
-        title: "Fantastic UCAT course",
-        description: "loremsfasdfsafdsfasdfafdsfs",
-        name: "user"
+        title: "Experienced and willing to offer help...",
+        description: "Experienced and willing to offer help at all time.In addition, it's honest , and the price is realistic but the resources are still really valuable and helpful.",
+        name: "Fatima Nada"
     },
     {
         rating: 5,
-        title: "Fantastic UCAT course",
-        description: "loremsfasdfsafdsfasdfafdsfs",
-        name: "user"
+        title: "University specific mock MMI with Medico",
+        description: "I had a mock MMI with Abdul today and it was nothing short of amazing. Abdul is incredibly knowledgeable and supportive. I really liked how it was very tailored to the university I have applied to, so I can tell that a lot of time and preparation have gone into that mock interview from medico’s side. Medico is truly a hidden gem that will give you all the tips and advice that you will need to ace your interviews. I 100% recommend them- no hesitation.",
+        name: "Consumer"
     },
     {
         rating: 5,
-        title: "Fantastic UCAT course",
-        description: "loremsfasdfsafdsfasdfafdsfs",
-        name: "user"
+        title: "Interview session with Abdul",
+        description: "Medico have been really supportive and has provided high quality service throughout! Did an interview session with Abdul today where he answered all my questions in so much detail and gave me so many new ideas and great advice! We went through some critical thinking questions and he taught me a really good method to approach these harder questions! Feel a lot more confident now going into my interview, would defo recommend medico!!",
+        name: "Amber Purba"
+    },
+    {
+        rating: 4,
+        title: "Really insightful tips...",
+        description: "Really insightful tips which I previously would have not known, good strategies explained throughout the session - most useful session was SJT which taught me a lot on how to increase marks and even insight into greater knowledge which can help with interview season.",
+        name: "Arishmah Asif"
     }
 ]
 

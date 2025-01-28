@@ -2,6 +2,7 @@ import { Modak } from "next/font/google";
 import { Separator } from "@/components/ui/separator"
 import { Button } from "./ui/button";
 import { InstagramIcon, FacebookIcon, LinkedinIcon } from "lucide-react";
+import Link from "next/link";
 
 
 const modak = Modak({ subsets: ['latin'], weight: '400' })
@@ -20,8 +21,8 @@ export default function Footer() {
 
                     <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left gap-3">
                         <h3 className="font-semibold">Contact Us</h3>
-                        <a href="mailto:info@medicotutoring.com" className="text-sm text-muted-foreground hover:text-primary">
-                            info@medicotutoring.com
+                        <a href="mailto:medicotutoring@gmail.com" className="text-sm text-muted-foreground hover:text-secondary">
+                            medicotutoring@gmail.com
                         </a>
                     </div>
                 </div>
@@ -34,8 +35,10 @@ export default function Footer() {
                     </p>
 
                     <div className="flex items-center gap-4">
-                        <Button variant="ghost" size="icon" className="">
-                            <InstagramIcon />
+                        <Button asChild variant="ghost" size="icon" className="">
+                            <Link href={"https://www.instagram.com/medico.tutoring/"} target="_blank" rel="noopener noreferrer"> 
+                                <InstagramIcon />
+                            </Link>
                         </Button>
                         <Button variant="ghost" size="icon" className="">
                             <FacebookIcon />

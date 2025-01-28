@@ -20,7 +20,7 @@ export default function Home() {
       <div className="w-full p-5 z-20 fixed top-0">
         <Navbar/>
       </div>
-      <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" z-0 absolute left-0 top-0 w-screen h-4/6 sm:h-5/6 lg:h-full"/>
+      <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" z-0 absolute left-0 top-0 w-screen h-full"/>
       
       <Hero/>
       <Event/>
