@@ -44,7 +44,7 @@ export default function WhyUs() {
                 <h1>Why Choose Us for Your Medical Tutoring Needs</h1>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-[5px] md:gap-[10px] max-w-[1300px] ">
+            <div className="flex flex-wrap justify-center items-center gap-[5px] md:gap-[10px] max-w-[1300px] w-screen ">
                 {components.map((component) => (
                     <div key={component.title} className="flex flex-col justify-center items-center gap-[5px] md:gap-3 px-[5px] md:px-5 size-[182px] md:w-[380px] md:h-[366px] lg:w-[360px] lg:h-[336px] bg-design rounded-xl">
                         <Image src={component.img} width={150} height={131} alt={component.title} className="h-[50px] md:h-[131px]" />

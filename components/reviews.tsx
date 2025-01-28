@@ -79,8 +79,8 @@ export default function Reviews() {
                         {reviews.map((review) => (
                             <CarouselItem key={review.name} className="basis-1/1 pl-6 ">
                                 <Card className="">
-                                    <CardContent className=" p-8 aspect-square flex flex-col justify-center items-center">
-                                        <div className=" flex flex-col w-[270px] break-words whitespace-normal text-start gap-2">
+                                    <CardContent className=" p-5 md:p-8 aspect-square flex flex-col justify-center items-center">
+                                        <div className=" flex flex-col w-[240px] md:w-[270px] break-words whitespace-normal text-start gap-2 md:gap-3">
 
                                             <div className="text-yellow-500 text-xl font-bold flex">
                                                 {Array.from({length: review.rating}).map((_,index) => (
@@ -91,9 +91,9 @@ export default function Reviews() {
                                                     src="star.svg" alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
                                                 ))}
                                             </div>
-                                            <h3 className="text-lg font-semibold mt-2">{review.title}</h3>
-                                            <h1 className="text-gray-600 text-sm mt-1">{review.description}</h1>
-                                            <p className="text-gray-500 text-sm mt-2">- {review.name}</p>
+                                            <h3 className="text-md md:text-lg font-semibold mt-2">{review.title}</h3>
+                                            <h1 className="text-gray-600 text-xs md:text-sm mt-1">{review.description}</h1>
+                                            <p className="text-gray-500 text-xs md:text-sm mt-2">- {review.name}</p>
                                         </div>
                                     </CardContent>
                                 </Card>
