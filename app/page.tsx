@@ -30,7 +30,7 @@ export default function Home() {
       <Reviews/>
       <AboutUs/>
       <FAQ/>
-      <div id="contact-us" className=" pt-20 flex lg:flex-row flex-col justify-between items-center lg:items-start gap-16 w-11/12">
+      <div id="contact-us" className=" pt-20 flex lg:flex-row flex-col justify-between items-center lg:items-start gap-16 w-full max-w-[1200px]">
         <LetsChat/>
         <Mailing/>
       </div>

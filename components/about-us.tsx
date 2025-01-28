@@ -41,10 +41,10 @@ export default function AboutUs() {
                 <h2 className={`${anton.className}`}>About Us</h2>
                 <h1>Get to know us, our core values and what makes us unique</h1>
             </div>
-            <div className="flex flex-col justify-center items-center gap-[40px] text-center text-background w-full">
+            <div className="flex flex-col justify-center items-center gap-[40px] text-center text-forground w-full">
                 <Accordion type="single" collapsible className="w-full flex flex-col gap-[40px]">
                     {components.map((component) => (
-                        <AccordionItem value={component.title} key={component.title} className="flex flex-col justify-center items-center p-[20px] gap-[10px] bg-secondary rounded-xl border-none">
+                        <AccordionItem value={component.title} key={component.title} className="flex flex-col justify-center items-center p-[20px] gap-[10px] bg-design rounded-xl border-none">
                             <div className="w-full">
                                 <AccordionTrigger className="w-full [&>svg]:hidden">
                                     <h1 className={`${anton.className} text-[36px] md:text-[48px] w-full text-center`}>{component.title}</h1>

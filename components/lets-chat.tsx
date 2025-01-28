@@ -16,6 +16,16 @@ import { Input } from "@/components/ui/input"
 import { Anton } from "next/font/google";
 import { Textarea } from "./ui/textarea"
 
+import { Terminal } from "lucide-react"
+ 
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
+import { useState } from "react"
+
+
 const formSchema = z.object({
     name: z.string().min(1, {message: "Name is required"}).max(50, {message: "Name must be less than 50 characters"}),
     email: z.string().email({message: "Invalid email address"}).min(1, {message: "Email is required"}).max(50, {message: "Email must be less than 50 characters"}),
@@ -26,6 +36,8 @@ const formSchema = z.object({
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 
 export default function LetsChat() {
+    const [successMessage, setSuccessMessage] = useState("");
+
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -36,12 +48,42 @@ export default function LetsChat() {
         },
     })
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values),
+            });
+    
+            if (!response.ok) {
+                throw new Error("Failed to send email");
+            }
+
+            setSuccessMessage("Your message has been sent successfully!");
+    
+            form.reset();
+            setTimeout(() => setSuccessMessage(""), 5000)
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send email. Please try again.");
+        }
     }
 
     return (
         <div className = "flex flex-col justify-center items-center gap-4 p-2">
+
+            {successMessage &&(
+                <div className="fixed top-4 left-4 z-50">
+                <Alert className="bg-designFull">
+                    <Terminal className="h-4 w-4" />
+                    <AlertTitle>Success!</AlertTitle>
+                    <AlertDescription>{successMessage}</AlertDescription>
+                </Alert>
+                </div>
+            )}
+
+
             <div className = "flex flex-col justify-center items-center gap-2">
                 <h2 className = {`${anton.className}`}>Let&apos;s Chat</h2>
                 <h1>Reach out and we’ll get in touch within 24 hours.</h1>
