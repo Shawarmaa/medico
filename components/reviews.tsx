@@ -1,6 +1,8 @@
 'use client'
 
 import { Anton } from "next/font/google";
+import Autoplay from "embla-carousel-autoplay"
+import React from "react";
 
 import Image from "next/image";
 
@@ -9,6 +11,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel"
 
 
@@ -55,19 +59,25 @@ const reviews : {rating: number, title?: string, description: string, name: stri
 ]
 
 export default function Reviews() {
+    const plugin = React.useRef(
+        Autoplay({delay: 2000, stopOnInteraction: false})
+    )
 
     return (
-        <div id="reviews" className=" pt-20 flex flex-col justify-center items-center text-center gap-32 w-full">
+        <div id="reviews" className=" pt-20 flex flex-col justify-center items-center text-center gap-32 w-full max-w-[1100px]">
             <div className="max-w-[640px]">
                 <h2 className={`${anton.className}`}>Students that already <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-designFull relative inline-block">
                         <span className="relative text-white">love</span>
                     </span> Medico</h2>
             </div>
-            
 
-            
-            <Carousel className="w-screen ">
-            <CarouselContent className={`-ml-6`}>
+            <Carousel
+                plugins={[plugin.current]}
+                className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+                >
+                <CarouselContent className={`-ml-6`}>
                         {reviews.map((review) => (
                             <CarouselItem key={review.name} className="basis-1/1 pl-6 ">
                                 <Card className="">
@@ -92,9 +102,7 @@ export default function Reviews() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                {/* <CarouselPrevious /> 
-                <CarouselNext /> */}
-            </Carousel>
+                </Carousel>
 
 
         </div>
