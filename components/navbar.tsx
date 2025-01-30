@@ -75,7 +75,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`${isScrolled? "bg-background/95" : "bg-transparent"} transition-all duration-1000  w-full flex flex-row justify-between items-center px-5 py-2 rounded-lg`}>
+    <div className={`${isScrolled? "bg-background/95 px-8 my-4" : "bg-transparent"} transition-all duration-1000  w-full flex flex-row justify-between items-center px-5 py-2 rounded-lg`}>
       <Link href={"#home"}>
       <h1 className={`${modak.className} text-3xl :text-4xl font-regular`}>Medico</h1>
       </Link>
@@ -141,7 +141,7 @@ export default function Navbar() {
 
       <div className="hidden lg:block">
 
-        <Link href={"#contact-us"} className=" text-sm shadow-[3px_3px_0_0_#422800] font-semibold select-none active:shadow-[2px_2px_0_0_#422800] active:translate-y-[2px] border-2 border-secondary rounded-[10px] px-[10px] py-[5px] flex justify-center items-center hover:bg-designFull/50 active:translate-x-[2px]">
+        <Link href={"#contact-us"} className=" text-sm font-semibold   border-2 border-secondary rounded-[10px] px-[10px] py-[5px] flex justify-center items-center hover:bg-designFull/50">
         Contact Us
         </Link>
       </div>
