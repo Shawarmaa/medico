@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Anton } from "next/font/google";
 const anton = Anton({ subsets: ['latin'], weight: '400' })
+import Image from "next/image";
 
 
 export default function Hero() {
@@ -20,10 +21,10 @@ export default function Hero() {
             <Link href={"https://uk.trustpilot.com/review/medicotutoring.com"} target="_blank" rel="noopener noreferrer" className="flex flex-row justify-center items-center gap-3 group">
                 <h1 className="text-xs font-bold group-hover:opacity-50">Excellent</h1>
 
-                <img src="stars.svg" alt="trustpilot stars" className="group-hover:opacity-50 transition-opacity"/>
+                <Image width={100} height={100} src="4.5stars.svg" alt="trustpilot stars" className="group-hover:opacity-50 transition-opacity"/>
 
                 <div className="flex flex-row justify-center items-center gap-1"> 
-                    <img src="star.svg" alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
+                    <Image width={15} height={15} src="star.svg" alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
                     <h1 className="text-xs font-bold group-hover:opacity-50">Trustpilot</h1>
                 </div>
             </Link>

@@ -66,7 +66,7 @@ export default function LetsChat() {
             setTimeout(() => setSuccessMessage(""), 5000)
         } catch (error) {
             console.error("Error:", error);
-            alert("Failed to send email. Please try again.");
+            setSuccessMessage("Failed to send email. Please try again.");
         }
     }
 
