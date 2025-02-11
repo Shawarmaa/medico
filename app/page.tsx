@@ -11,6 +11,8 @@ import LetsChat from "@/components/lets-chat";
 import Mailing from "@/components/mailing";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import React from "react";
+import { Ripple } from "@/components/magicui/ripple";
 
 
 export default function Home() {
@@ -20,9 +22,18 @@ export default function Home() {
       <div className="w-full p-5 z-20 fixed top-0">
         <Navbar/>
       </div>
-      <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" z-0 absolute left-0 top-0 w-screen h-full"/>
+      <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" -z-50 absolute left-0 top-0 w-screen h-full"/>
       
-      <Hero/>
+      <div className="h-[600px] w-full overflow-hidden rounded-lg flex flex-col items-center justify-center">
+        <Hero/>
+      <Ripple
+        mainCircleSize={300}
+        mainCircleOpacity={0.25}
+        className="flex justify-center items-center -top-[95px] "
+      >
+      </Ripple>
+    </div>
+
       <Event/>
       <Services/>
       <HowItWorks/>

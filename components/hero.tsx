@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <div className=" flex flex-col items-center pt-0 md:pt-10 p-10 gap-8 z-10">
+        <div className=" flex flex-col items-center py-0  p-10 gap-8 z-10">
 
             <div className={"flex flex-col items-center gap-4 text-center" }>
                 <h1 className="hidden sm:block">Smart people use tutors to get even smarter</h1>
