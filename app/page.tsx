@@ -24,15 +24,18 @@ export default function Home() {
       </div>
       <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" -z-50 absolute left-0 top-0 w-screen h-full"/>
       
-      <div className="h-[600px] w-full overflow-hidden rounded-lg flex flex-col items-center justify-center">
-        <Hero/>
-      <Ripple
-        mainCircleSize={300}
-        mainCircleOpacity={0.25}
-        className="flex justify-center items-center -top-[95px] "
-      >
-      </Ripple>
-    </div>
+      <div className="absolute overflow-hidden inset-0 -z-10">
+        <Ripple
+          mainCircleSize={300}
+          mainCircleOpacity={0.25}
+          className="absolute flex justify-center items-center -top-[60px] "
+        >
+        </Ripple>
+      </div>
+      
+      <div className="relative h-[600px] w-full rounded-lg flex flex-col items-center justify-center">
+        <Hero />
+      </div>
 
       <Event/>
       <Services/>
