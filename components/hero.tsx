@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Anton } from "next/font/google";
 const anton = Anton({ subsets: ['latin'], weight: '400' })
 import Image from "next/image";
+import { BlurFade } from "./magicui/blur-fade";
 
 
 export default function Hero() {
@@ -10,14 +11,23 @@ export default function Hero() {
         <div className=" flex flex-col items-center py-0  p-10 gap-8 z-10">
 
             <div className={"flex flex-col items-center gap-4 text-center" }>
-                <h1 className="hidden sm:block">Smart people use tutors to get even smarter</h1>
-                <h3 className={`text-5xl md:text-7xl xl:text-8xl ${anton.className}`}>Rethink Learning</h3>
-                <h1 className=" md:max-w-3xl"><p className="hidden sm:block">Unlock your potential with Medico.</p><p> Personalized tutoring from passionate experts to boost your grades and career.</p></h1>
+                <BlurFade delay={0.05} inView>
+                    <h1 className="hidden sm:block">Smart people use tutors to get even smarter</h1>
+                </BlurFade>
+                <BlurFade delay={0.15} inView>
+
+                    <h3 className={`text-5xl md:text-7xl xl:text-8xl ${anton.className}`} >Rethink Learning</h3>
+                </BlurFade>
+                <BlurFade delay={0.25} inView>
+                    <h1 className=" md:max-w-3xl"><p className="hidden sm:block">Unlock your potential with Medico.</p><p> Personalized tutoring from passionate experts to boost your grades and career.</p></h1>
+                </BlurFade>
             </div>
 
+            <BlurFade delay={0.35} inView>
             <Button className="p-0 shadow-[-4px_4px_0_0_#422800] select-none active:shadow-[-2px_2px_0_0_#422800] active:translate-x-[-2px] active:translate-y-[2px]"><Link href={"#services"} className="px-[20px] py-[10px]">Our Services</Link></Button>
+            </BlurFade>
 
-
+            <BlurFade delay={0.45} inView>
             <Link href={"https://uk.trustpilot.com/review/medicotutoring.com"} target="_blank" rel="noopener noreferrer" className="flex flex-row justify-center items-center gap-3 group">
                 <h1 className="text-xs font-bold group-hover:opacity-50">Excellent</h1>
 
@@ -28,6 +38,8 @@ export default function Hero() {
                     <h1 className="text-xs font-bold group-hover:opacity-50">Trustpilot</h1>
                 </div>
             </Link>
+            </BlurFade>
+
 
         </div>
     )
