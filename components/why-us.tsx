@@ -58,7 +58,7 @@ export default function WhyUs() {
 
             <div className="flex flex-wrap justify-center items-center gap-[5px] md:gap-[10px] max-w-[1300px] w-screen ">
                 {components.map((component) => (
-                    <BlurFade delay={0.25*2} inView key={component.title}>
+                    <BlurFade delay={0.35} inView key={component.title}>
                         <MagicCard
                             className="flex-col items-center justify-center
                             flex gap-[5px] md:gap-3 px-[5px] md:px-5 size-[182px] md:w-[380px] md:h-[366px] lg:w-[360px] lg:h-[336px] bg-design rounded-xl"

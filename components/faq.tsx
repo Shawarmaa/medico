@@ -5,6 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+import { BlurFade } from "./magicui/blur-fade";
    
 
 const anton = Anton({ subsets: ['latin'], weight: '400' })
@@ -40,30 +41,22 @@ const components: { title: string, description: string }[] = [
 export default function FAQ() {
     return (
         <div id="faqs" className=" pt-20 px-5 flex flex-col justify-center xl:flex-row xl:items-start items-center text-start w-full gap-[45px] ">
-            <div className = "flex flex-col justify-center items-center text-center xl:text-start xl:items-start">
-                <h2 className = {`${anton.className}`}>FAQ&apos;s</h2>
-                <h1>Answers to some questions you might have</h1>
-            </div>
+            <BlurFade delay={0.2} inView>      
+                <div className = "flex flex-col justify-center items-center text-center xl:text-start xl:items-start">
+                    <h2 className = {`${anton.className}`}>FAQ&apos;s</h2>
+                    <h1>Answers to some questions you might have</h1>
+                </div>
+            </BlurFade>
 
             <div className = "flex flex-col justify-center items-center gap-[20px] md:gap-[45px] w-full leading-[20px] max-w-[750px]">
-                {/*{components.map((component) => (
-                    <Collapsible key={component.title} className = "hidden flex flex-col gap-[10px] justify-between items-center p-[10px] md:py-[20px] md:px-[30px] rounded-[10px] bg-design w-full">
-                        <CollapsibleTrigger className = "flex flex-row justify-between items-center w-full">
-                            <h1>{component.title}</h1>
-                            <ChevronDownIcon className = "w-[20px] h-[20px] md:w-[30px] md:h-[30px]"/>
-                        </CollapsibleTrigger>
-
-                        <CollapsibleContent>
-                            <p>{component.description}</p>
-                        </CollapsibleContent>
-                    </Collapsible>
-                ))}*/}
                 <Accordion type="single" collapsible className="w-full flex flex-col ">
                     {components.map((component) =>(
-                        <AccordionItem value={component.title} key={component.title}>
-                            <AccordionTrigger><h1>{component.title}</h1></AccordionTrigger>
-                            <AccordionContent><p className = "text-[14px] md:text-[18px]">{component.description}</p></AccordionContent>
-                        </AccordionItem>
+                        <BlurFade delay={0.35} inView key={component.title}>
+                            <AccordionItem value={component.title} >
+                                <AccordionTrigger><h1>{component.title}</h1></AccordionTrigger>
+                                <AccordionContent><p className = "text-[14px] md:text-[18px]">{component.description}</p></AccordionContent>
+                            </AccordionItem>
+                        </BlurFade>
                     ))}
                     
                 </Accordion>

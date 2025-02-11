@@ -13,6 +13,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import React from "react";
 import { Ripple } from "@/components/magicui/ripple";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 
 export default function Home() {
@@ -45,8 +46,13 @@ export default function Home() {
       <AboutUs/>
       <FAQ/>
       <div id="contact-us" className=" pt-20 flex lg:flex-row flex-col justify-between items-center lg:items-start gap-16 w-full max-w-[1200px]">
-        <LetsChat/>
-        <Mailing/>
+        <BlurFade delay={0.2} inView>
+          <LetsChat/> 
+        </BlurFade>
+                       
+        <BlurFade delay={0.35} inView>
+          <Mailing/>             
+        </BlurFade>
       </div>
       <Footer/>
 

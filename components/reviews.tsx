@@ -12,6 +12,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import { BlurFade } from "./magicui/blur-fade";
 
 
 
@@ -63,11 +64,13 @@ export default function Reviews() {
 
     return (
         <div id="reviews" className=" pt-20 flex flex-col justify-center items-center text-center gap-32 w-full max-w-[1100px]">
-            <div className="max-w-[640px]">
-                <h2 className={`${anton.className}`}>Students that already <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-designFull relative inline-block">
-                        <span className="relative text-white">love</span>
-                    </span> Medico</h2>
-            </div>
+            <BlurFade delay={0.2} inView>           
+                <div className="max-w-[640px]">
+                    <h2 className={`${anton.className}`}>Students that already <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-designFull relative inline-block">
+                            <span className="relative text-white">love</span>
+                        </span> Medico</h2>
+                </div>
+            </BlurFade>
 
             <Carousel
                 plugins={[plugin.current]}
@@ -77,22 +80,24 @@ export default function Reviews() {
                 >
                 <CarouselContent className={`-ml-6`}>
                         {reviews.map((review) => (
-                            <CarouselItem key={review.name} className="basis-1/1 pl-6 ">
-                                <Card className="">
-                                    <CardContent className=" p-5 md:p-8 aspect-square flex flex-col justify-center items-center">
-                                        <div className=" flex flex-col w-[240px] md:w-[270px] break-words whitespace-normal text-start gap-2 md:gap-3">
-                                            <Image
-                                            width={130} 
-                                            height={100} 
-                                            src={review.rating} alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
+                            <BlurFade key={review.name} delay={0.3} inView>
+                                <CarouselItem  className="basis-1/1 pl-6 ">
+                                    <Card className="">
+                                        <CardContent className=" p-5 md:p-8 aspect-square flex flex-col justify-center items-center">
+                                            <div className=" flex flex-col w-[240px] md:w-[270px] break-words whitespace-normal text-start gap-2 md:gap-3">
+                                                <Image
+                                                width={130} 
+                                                height={100} 
+                                                src={review.rating} alt="trustpilot star" className="group-hover:opacity-50 transition-opacity" />
 
-                                            <h3 className="text-md md:text-lg font-semibold mt-2">{review.title}</h3>
-                                            <h1 className="text-gray-600 text-xs md:text-sm mt-1">{review.description}</h1>
-                                            <p className="text-gray-500 text-xs md:text-sm mt-2">- {review.name}</p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </CarouselItem>
+                                                <h3 className="text-md md:text-lg font-semibold mt-2">{review.title}</h3>
+                                                <h1 className="text-gray-600 text-xs md:text-sm mt-1">{review.description}</h1>
+                                                <p className="text-gray-500 text-xs md:text-sm mt-2">- {review.name}</p>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </CarouselItem>
+                            </BlurFade>
                         ))}
                     </CarouselContent>
                 </Carousel>
