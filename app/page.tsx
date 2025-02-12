@@ -25,14 +25,12 @@ export default function Home() {
       </div>
       <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" -z-50 absolute left-0 top-0 w-screen h-full"/>
       
-      <div className="absolute overflow-hidden inset-0 -z-10">
         <Ripple
           mainCircleSize={300}
           mainCircleOpacity={0.25}
-          className="absolute flex justify-center items-center -top-[60px] "
+          className="absolute flex justify-center items-center -top-[60px] overflow-hidden inset-0 -z-10 "
         >
         </Ripple>
-      </div>
       
       <div className="relative h-[600px] w-full rounded-lg flex flex-col items-center justify-center">
         <Hero />
