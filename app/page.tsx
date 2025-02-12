@@ -24,7 +24,7 @@ export default function Home() {
         <Navbar/>
       </div>
       <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" -z-50 absolute left-0 top-0 w-screen h-full"/>
-      <div className="flex justify-center items-center w-screen h-full relative -z-40 lg:p-20 lg:top-10 ">
+      <div className="flex justify-center items-center w-screen h-full relative  lg:p-20 lg:top-10 ">
       <Ripple
         mainCircleSize={260}
         mainCircleOpacity={0.25}
