@@ -18,24 +18,25 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 
 export default function Home() {
   return (
-    <div id="home" className=" pt-48 flex flex-col gap-14 items-center lg:gap-36 px-2.5 md:px-10 lg:px-24">
+    <div id="home" className=" pt-48 flex flex-col gap-14 lg:gap-36 items-center  px-2.5 md:px-10 lg:px-24">
       
-      <div className="w-full p-5 z-20 fixed top-0">
+      <div className="w-full p-5 z-50 fixed top-0">
         <Navbar/>
       </div>
       <Image src={"/rectangle.png"} width={100} height={100} alt="background gradient" className=" -z-50 absolute left-0 top-0 w-screen h-full"/>
-      
-        <Ripple
-          mainCircleSize={300}
-          mainCircleOpacity={0.25}
-          className="absolute flex justify-center items-center -top-[60px] overflow-hidden inset-0 -z-10 "
-        >
-        </Ripple>
-      
-      <div className="relative h-[600px] w-full rounded-lg flex flex-col items-center justify-center">
+      <div className="flex justify-center items-center w-screen h-full relative -z-40 lg:p-20 lg:top-10">
+      <Ripple
+        mainCircleSize={260}
+        mainCircleOpacity={0.25}
+        className="hidden md:block absolute overflow:hidden -z-30 -top-48 lg:-top-24 "
+        />
+      <Ripple
+        mainCircleSize={100}
+        mainCircleOpacity={0.25}
+        className="md:hidden absolute overflow:hidden -z-30 -top-48 lg:-top-24 "
+        />
         <Hero />
       </div>
-
       <Event/>
       <Services/>
       <HowItWorks/>
