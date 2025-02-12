@@ -84,8 +84,8 @@ export default function Services() {
                 </div>
 
             </div>
-            <BlurFade delay={0.35} inView>    
-                <img src="doctors.svg" alt="doctors image" className="hidden xl:block" />
+            <BlurFade delay={0.35} inView className="hidden xl:block">    
+                <img src="doctors.svg" alt="doctors image"  />
             </BlurFade>
         </div>
     )
