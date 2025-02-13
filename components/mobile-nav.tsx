@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { DialogTitle } from "@radix-ui/react-dialog"; // Add this import
 
 import { Button } from "@/components/ui/button";
 import {
@@ -31,12 +32,12 @@ export default function MobileNav() {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
-        <Button
-          variant="ghost" className="h-8 w-8 p-0 text-base">
+        <Button variant="ghost" className="h-8 w-8 p-0 text-base">
           <img src="menu.svg" alt="menu" className="size-7" />
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
+        <DialogTitle className="sr-only">Navigation Menu</DialogTitle> {/* Add this line */}
         <div className="overflow-auto p-6">
           <div className="flex flex-col">
             {navLinks.map((item) => (
@@ -44,7 +45,7 @@ export default function MobileNav() {
                 key={item.href}
                 href={item.href}
                 onOpenChange={setOpen}
-                className=" py-3"
+                className="py-3"
               >
                 {item.title}
               </MobileLink>
