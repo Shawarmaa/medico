@@ -74,11 +74,17 @@ function MobileLink({
   return (
     <Link
       href={href}
-      onClick={() => {
-        document.getElementById(href.replace("#", ""))?.scrollIntoView({
-          behavior: "smooth",
-        });
-        onOpenChange?.(false); // Close the drawer
+      onClick={(e) => {
+        e.preventDefault(); // Prevent default navigation
+        setTimeout(() => {
+          const element = document.getElementById(href.replace("#", ""));
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          } else {
+            window.location.href = href; // Fallback if element doesn't exist
+          }
+        }, 100); // Delay to ensure element is loaded
+        onOpenChange?.(false);
       }}
       className={`text-base ${className}`}
       {...props}
@@ -87,3 +93,27 @@ function MobileLink({
     </Link>
   );
 }
+
+// function MobileLink({
+//   href,
+//   onOpenChange,
+//   className,
+//   children,
+//   ...props
+// }: MobileLinkProps) {
+//   return (
+//     <Link
+//       href={href}
+//       onClick={() => {
+//         document.getElementById(href.replace("#", ""))?.scrollIntoView({
+//           behavior: "smooth",
+//         });
+//         onOpenChange?.(false); // Close the drawer
+//       }}
+//       className={`text-base ${className}`}
+//       {...props}
+//     >
+//       {children}
+//     </Link>
+//   );
+// }
