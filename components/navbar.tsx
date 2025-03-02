@@ -82,9 +82,9 @@ export default function Navbar() {
 
       <div className="hidden lg:block">
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className="rounded-xl">
 
-            <NavigationMenuItem >
+            <NavigationMenuItem>
               <NavigationMenuTrigger >Tutoring</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] md:w-[500px] lg:w-[600px]  gap-1 p-4  lg:grid-cols-2">
@@ -170,7 +170,7 @@ const ListItem = React.forwardRef<
         )}
         {...props}
       >
-        <div className="text-sm font-medium leading-none">{title}</div>
+        <div className="text-sm font-bold leading-none">{title}</div>
         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
           {children}
         </p>
