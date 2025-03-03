@@ -38,12 +38,11 @@ const images: {name: string, position: string, src: string, alt: string}[] = [
 export default function AboutUs() {
     return (
         <div id="about-us" className=" pt-20 flex flex-col justify-center items-center gap-[60px] max-w-[1000px] w-full">
-            <BlurFade delay={0.2} inView>
-                <div className="flex flex-col justify-center items-center">
-                    <h2 className={`${anton.className}`}>About Us</h2>
-                    <h1>Get to know us, our core values and what makes us unique</h1>
-                </div>  
-            </BlurFade>
+            <div className="flex flex-col justify-center items-center">
+                <h2 className={`${anton.className}`}>About Us</h2>
+                <h1>Get to know us, our core values and what makes us unique</h1>
+            </div>
+            
             <div className="flex flex-col justify-center items-center gap-[40px] text-center text-forground w-full">
                 <Accordion type="single" collapsible className="w-full flex flex-col gap-[40px]">
                     {components.map((component) => (

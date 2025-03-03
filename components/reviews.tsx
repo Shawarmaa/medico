@@ -64,13 +64,11 @@ export default function Reviews() {
 
     return (
         <div id="reviews" className=" pt-20 flex flex-col justify-center items-center text-center gap-32 w-full max-w-[1100px]">
-            <BlurFade delay={0.2} inView>           
-                <div className="max-w-[640px]">
-                    <h2 className={`${anton.className}`}>Students that already <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-designFull relative inline-block">
-                            <span className="relative text-white">love</span>
-                        </span> Medico</h2>
-                </div>
-            </BlurFade>
+            <div className="max-w-[640px]">
+                <h2 className={`${anton.className}`}>Students that already <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-designFull relative inline-block">
+                        <span className="relative text-white">love</span>
+                    </span> Medico</h2>
+            </div>
 
             <Carousel
                 plugins={[plugin.current]}

@@ -48,13 +48,10 @@ export default function WhyUs() {
     const {theme} = useTheme();
     return (
         <div id="why-us" className=" pt-20 flex flex-col justify-center items-center gap-[30px] md:gap-[60px] text-center ">
-            <BlurFade delay={0.25} inView>
-
-                <div className="flex flex-col items-center gap-5 px-5">
-                    <h2 className={`${anton.className}`}>Why Us</h2>
-                    <h1>Why Choose Us for Your Medical Tutoring Needs</h1>
-                </div>
-            </BlurFade>
+            <div className="flex flex-col items-center gap-5 px-5">
+                <h2 className={`${anton.className}`}>Why Us</h2>
+                <h1>Why Choose Us for Your Medical Tutoring Needs</h1>
+            </div>
 
             <div className="flex flex-wrap justify-center items-center gap-[5px] md:gap-[10px] max-w-[1300px] w-screen ">
                 {components.map((component) => (

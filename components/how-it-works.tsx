@@ -30,13 +30,8 @@ export default function HowItWorks() {
         <div className=" pt-20 flex flex-col justify-center items-center gap-4 md:gap-[60px] text-center w-full">
             
             <div className="flex flex-col items-center gap-5 px-5">
-                <BlurFade delay={0.05} inView >
-                    <h2 className={`${anton.className}`}>How It Works</h2> 
-                </BlurFade>
-                <BlurFade delay={0.15} inView>
-                    <h1>Whether you&apos;re revising for an exam or needs regular support, it&apos;s easy to get started.</h1>
-                </BlurFade>
-
+                <h2 className={`${anton.className}`}>How It Works</h2> 
+                <h1>Whether you&apos;re revising for an exam or needs regular support, it&apos;s easy to get started.</h1>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-[60px] lg:justify-around  md:px-10 lg:px-30 w-full">
